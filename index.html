@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+<body>
+    <div id="map" style="width: 500px; height: 400px;"></div>
+    <button id="button">new coordinates</button>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+
+var map;
+var la= 34.397
+var ln= 150.644
+console.log(la);
+console.log(ln);
+var initMap = function() {
+  console.log(la);
+  console.log(ln);
+     map = new google.maps.Map(document.getElementById("map"), {
+        center: {lat: la, lng: ln},
+        zoom: 15
+    });
+    var marker = new google.maps.Marker({
+    position: {lat: la, lng: ln},
+    map: map
+  });
+}
+
+$("#button").on("click", function(){
+   la= -34.397;
+   ln= 150.644
+   console.log(la);
+   console.log(ln);
+   map = new google.maps.Map(document.getElementById("map"), {
+        center: {lat: la, lng: ln},
+        zoom: 15
+    });
+    var marker = new google.maps.Marker({
+    position: {lat: la, lng: ln},
+    map: map
+  });
+   
+})
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Gu4f2332ZHDJXylCEO8_3qXUGa66zKY&callback=initMap" async defer></script>
+</body>
