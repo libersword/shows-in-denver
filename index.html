@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Shows</title>
+</head>
+
+<body>
+    <!-- Main NAV -->
+    <div class="navbar-fixed">
+        <nav class="grey darken-3">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#" class="brand-logo center">Shows in Denver!</a>
+                    <span class="right hide-on-small-and-down" id="navDate" href="#"></s>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End Main NAV -->
+
+    <!-- Filter NAV -->
+    <div class="navbar-fixed subnavbar-fixed">
+        <div class="nav-wrapper row subnav-filters">
+            <form class="co s12">
+                <div class="row">
+                    <!-- <div class="input-field col s1 filters-span-col">
+                        <span id="filters-span"><i class="material-icons left">settings</i>Filters</span>
+                    </div> -->
+
+                    <div class="input-field col s12 m4">
+                        <input id="artist" type="text">
+                        <label for="artist">Artist</label>
+                    </div>
+                    <div class="input-field col s12 m4">
+                        <select multiple>
+                            <option value="1" selected>Lindy Hop</option>
+                            <option value="2" selected>Blues</option>
+                            <option value="3" selected>Balboa</option>
+                            <option value="3" selected>Jazz</option>
+                            <option value="3" selected>Shag</option>
+                            <option value="3" selected>Charleston</option>
+                        </select>
+                        <label>Venue</label>
+                    </div>
+                    <div class="input-field col s12 m4">
+                        <select multiple>
+                            <option value="1" selected>Rock</option>
+                            <option value="2" selected>Blues</option>
+                            <option value="3" selected>Alternative</option>
+                            <option value="3" selected>Jazz</option>
+                            <option value="3" selected>Rap</option>
+                            <option value="3" selected>Reggae</option>
+                        </select>
+                        <label for="genre">Genre</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input type="text" class="datepicker" id="date">
+                        <label for="date">Start Date</label>
+                    </div>
+
+                    <div class="input-field col s2">
+                        <input type="text" class="datepicker" id="date">
+                        <label for="date">End Date</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input type="text" class="timepicker" id="time">
+                        <label for="time">Choose a Time</label>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- End Filter NAV -->
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <div id="map"></div>
+    </div>
+    <!-- end CONTAINER -->
+
+
+    <div class="card-container">
+        <span class="card-container-top-action card-action black"></span>
+        <h5>Events in Denver</h5>
+
+        <div class="card hoverable">
+            <div class="card-content">
+
+                <div class="card-image">
+                    <img class="responsive-img"
+                        src="https://www.wweek.com/resizer/Cy4-67nrKnZCvUtnS2DiImQt5tI=/1200x0/filters:quality(100)/static.wweek.com/image-archive/24458/music_bootsycollins_blakejames.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Bootsie Collins</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim inventore.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card hoverable">
+                <div class="card-content">
+
+                    <div class="card-image">
+                        <img class="responsive-img"
+                            src="https://worldmusiccentral.org/wp-content/uploads/Vassar_Clements.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Vassar Clements</span>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim inventore.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card hoverable">
+                    <div class="card-content">
+
+                        <div class="card-image">
+                            <img class="responsive-img "
+                                src="http://t0.gstatic.com/images?q=tbn:ANd9GcQi7Wo7mSqzFdo9udoTyFnEfPgnKuPNBMhCWhG7SZJEERfBfwI6"
+                                class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">LIZZO</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim inventore.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card hoverable">
+                        <div class="card-content">
+
+                            <div class="card-image">
+                                <img class="responsive-img"
+                                    src="https://www.wweek.com/resizer/Cy4-67nrKnZCvUtnS2DiImQt5tI=/1200x0/filters:quality(100)/static.wweek.com/image-archive/24458/music_bootsycollins_blakejames.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Bootsie Collins</span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim inventore.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card hoverable">
+                            <div class="card-content">
+
+                                <div class="card-image">
+                                    <img class="responsive-img"
+                                        src="https://worldmusiccentral.org/wp-content/uploads/Vassar_Clements.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">Vassar Clements</span>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim
+                                        inventore.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card hoverable">
+                                <div class="card-content">
+
+                                    <div class="card-image">
+                                        <img class="responsive-img "
+                                            src="http://t0.gstatic.com/images?q=tbn:ANd9GcQi7Wo7mSqzFdo9udoTyFnEfPgnKuPNBMhCWhG7SZJEERfBfwI6"
+                                            class="responsive-img">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title">LIZZO</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim
+                                            inventore.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card hoverable">
+                                    <div class="card-content">
+
+                                        <div class="card-image">
+                                            <img class="responsive-img"
+                                                src="https://www.wweek.com/resizer/Cy4-67nrKnZCvUtnS2DiImQt5tI=/1200x0/filters:quality(100)/static.wweek.com/image-archive/24458/music_bootsycollins_blakejames.jpg">
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title">Bootsie Collins</span>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum enim
+                                                inventore.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card hoverable">
+                                        <div class="card-content">
+
+                                            <div class="card-image">
+                                                <img class="responsive-img"
+                                                    src="https://worldmusiccentral.org/wp-content/uploads/Vassar_Clements.jpg">
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title">Vassar Clements</span>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi harum
+                                                    enim inventore.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card hoverable">
+                                            <span class="card-content">
+
+                                                <div class="card-image">
+                                                    <img class="responsive-img "
+                                                        src="http://t0.gstatic.com/images?q=tbn:ANd9GcQi7Wo7mSqzFdo9udoTyFnEfPgnKuPNBMhCWhG7SZJEERfBfwI6"
+                                                        class="responsive-img">
+                                                </div>
+                                                <span class="card-content">
+                                                    <span class="card-title">LIZZO</span>
+                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                                        harum enim inventore.
+                                                    </p>
+                                                </span>
+                                            </span>
+
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <script type="text/javascript"
+                                            src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                                        <script
+                                            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+                                        </script>
+                                        <script
+                                            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+                                        </script>
+
+                                        <!-- JS and jQuery for Materialize -->
+                                        <script>
+                                            $(document).ready(function () {
+                                                $('#navDate').text(moment().format('dddd, MMMM Do'))
+
+                                                $('.datepicker').on('mousedown', function (event) {
+                                                    event.preventDefault();
+                                                })
+
+                                                $('.timepicker').on('mousedown', function (event) {
+                                                    event.preventDefault();
+                                                })
+
+                                                $('.datepicker').pickadate({
+                                                    selectMonths: true,
+                                                    selectYears: 15,
+                                                    closeOnSelect: true
+                                                });
+
+                                                $('.timepicker').pickatime({
+                                                    default: 'now',
+                                                    twelvehour: true,
+                                                    donetext: 'ok',
+                                                    cleartext: 'clear',
+                                                    canceltext: 'cancel',
+                                                    autoclose: true
+                                                });
+
+                                                $('.parallax').parallax();
+
+                                                $('select').material_select();
+
+
+                                            });
+                                        </script>
+</body>
+
+</html>
