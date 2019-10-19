@@ -7,18 +7,14 @@
 </head>
 <body>
     <div id="map" style="width: 500px; height: 400px;"></div>
-    <button id="button">new coordinates</button>
+    <button id="button" h= "39.8" v= "-104.8">new coordinates</button>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 
 var map;
-var la= 34.397
-var ln= 150.644
-console.log(la);
-console.log(ln);
+var la= 39.7392
+var ln= -104.9903
 var initMap = function() {
-  console.log(la);
-  console.log(ln);
      map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: la, lng: ln},
         zoom: 15
@@ -30,10 +26,8 @@ var initMap = function() {
 }
 
 $("#button").on("click", function(){
-   la= -34.397;
-   ln= 150.644
-   console.log(la);
-   console.log(ln);
+   la= parseFloat($(this).attr("h"), 10);
+   ln= parseFloat($(this).attr("v"), 10)
    map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: la, lng: ln},
         zoom: 15
