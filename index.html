@@ -13,74 +13,80 @@
 </head>
 
 <body>
-    <!-- Main NAV -->
-    <div class="navbar-fixed">
-        <nav class="grey darken-3">
-            <div class="nav-wrapper">
-                <div class="container">
-                    <a href="#" class="brand-logo center">Shows in Denver!</a>
-                    <span class="right hide-on-small-and-down" id="navDate" href="#"></s>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- End Main NAV -->
+    <!--  NAV -->
+    <nav class="nav">
+        <div class="nav-wrapper grey">
+            <a href="#" class="brand-logo center">Shows in Denver</a>
+            <a href="#" data-activates="mobile" class="button-collapse right"><i class="material-icons">filter_list</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <!-- <li><a id="homeMenu" href="#">Homee</a></li>
+                <li><a id="searchMenu" href="#">Matches</a></li>
+                <li><a id="profileMenu" href="#">Profile</a></li>
+                <li><a id="loginMenu" href="#">Login</a></li> -->
+                <li><a id="logoutMenu" href="#"><span class="right hide-on-small-and-down" id="navDate" href="#"></s></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile">
+                <li><a id="logoutMenu" href="#"><div class="input-field col s1 filters-span-col">
+                    <span id="filters-span"><i class="material-icons left">settings</i>Filters</span>
+                </div></a></li>
 
-    <!-- Filter NAV -->
-    <div class="navbar-fixed subnavbar-fixed">
-        <div class="nav-wrapper row subnav-filters">
-            <form class="co s12">
-                <div class="row">
-                    <!-- <div class="input-field col s1 filters-span-col">
-                        <span id="filters-span"><i class="material-icons left">settings</i>Filters</span>
-                    </div> -->
+                <li><a id="homeMenu" href="#"><div class="input-field col s12 m4">
+                    <input id="artist" type="text">
+                    <label for="artist">Artist</label>
+                </div></a></li>
 
-                    <div class="input-field col s12 m4">
-                        <input id="artist" type="text">
-                        <label for="artist">Artist</label>
-                    </div>
-                    <div class="input-field col s12 m4">
-                        <select multiple>
-                            <option value="1" selected>Lindy Hop</option>
-                            <option value="2" selected>Blues</option>
-                            <option value="3" selected>Balboa</option>
-                            <option value="3" selected>Jazz</option>
-                            <option value="3" selected>Shag</option>
-                            <option value="3" selected>Charleston</option>
-                        </select>
-                        <label>Venue</label>
-                    </div>
-                    <div class="input-field col s12 m4">
-                        <select multiple>
-                            <option value="1" selected>Rock</option>
-                            <option value="2" selected>Blues</option>
-                            <option value="3" selected>Alternative</option>
-                            <option value="3" selected>Jazz</option>
-                            <option value="3" selected>Rap</option>
-                            <option value="3" selected>Reggae</option>
-                        </select>
-                        <label for="genre">Genre</label>
-                    </div>
-                    <div class="input-field col s2">
-                        <input type="text" class="datepicker" id="date">
-                        <label for="date">Start Date</label>
-                    </div>
+                <li><a id="venue" href="#"><div class="input-field col s12 m4">
+                    <select multiple>
+                        <option value="1" selected>Pepsi Center</option>
+                        <option value="2" selected>Ogden Theatre</option>
+                        <option value="2" selected>Bluebird Theater</option>
+                        <option value="2" selected>Boulder Theater</option>
+                        <option value="3" selected>Cervantes Ballroom</option>
+                        <option value="4" selected>Mission Ballroom</option>
+                        <option value="5" selected>Fillmore Auditorium</option>
+                        <option value="6" selected>DPAC</option>
+                        <option value="6" selected>Macky Auditorium</option>
+                        <option value="6" selected>Red Rocks</option>
+                        <option value="6" selected>Summit</option>
+                        <option value="6" selected>Buffalo Rose</option>
+                        <option value="6" selected>Paramount Theatre</option>
+                        <option value="6" selected>Marquis Theater</option>
+                    </select>
+                    <label>Venue</label>
+                </div></a></li>
 
-                    <div class="input-field col s2">
-                        <input type="text" class="datepicker" id="date">
-                        <label for="date">End Date</label>
-                    </div>
-                    <div class="input-field col s2">
-                        <input type="text" class="timepicker" id="time">
-                        <label for="time">Choose a Time</label>
-                    </div>
+                <!-- <li><a id="genre" href="#"><div class="input-field col s12 m4">
+                    <select multiple>
+                        <option value="1" selected>Rock</option>
+                        <option value="2" selected>Blues</option>
+                        <option value="3" selected>Alternative</option>
+                        <option value="3" selected>Jazz</option>
+                        <option value="3" selected>Rap</option>
+                        <option value="3" selected>Reggae</option>
+                    </select>
+                    <label for="genre">Genre</label>
+                </div></a></li> -->
 
-                </div>
-            </form>
+                <li><a id="start-date" href="#"><div class="input-field col s2">
+                    <input type="text" class="datepicker" id="date">
+                    <label for="date">Start Date</label>
+                </div></a></li>
+
+                <li><a id="end-date" href="#"><div class="input-field col s2">
+                    <input type="text" class="datepicker" id="date">
+                    <label for="date">End Date</label>
+                </div></a></li>
+                
+                <!-- <li><a id="time" href="#"><div class="input-field col s2">
+                    <input type="text" class="timepicker" id="time">
+                    <label for="time">Choose a Time</label>
+                </div></a></li> -->
+                <li><a id="search" href="#"><div class="input-field col s1 filters-span-col">
+                        <span id="filters-span"><i class="material-icons left">search</i>Search</span>
+                    </div></a></li>
+            </ul>
         </div>
-
-    </div>
-
+    </nav>
     <!-- End Filter NAV -->
 
     <!-- CONTAINER -->
@@ -248,6 +254,9 @@
                                         <!-- JS and jQuery for Materialize -->
                                         <script>
                                             $(document).ready(function () {
+                                                $(".button-collapse").sideNav();
+                                                $(".dropdown-trigger").dropdown();
+
                                                 $('#navDate').text(moment().format('dddd, MMMM Do'))
 
                                                 $('.datepicker').on('mousedown', function (event) {
@@ -273,7 +282,6 @@
                                                     autoclose: true
                                                 });
 
-                                                $('.parallax').parallax();
 
                                                 $('select').material_select();
 
