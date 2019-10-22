@@ -1,26 +1,26 @@
 var map;
-var la= 39.7392
-var ln= -104.9903
+var lat= 39.7392
+var lon= -104.9903
 var initMap = function() {
      map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: la, lng: ln},
+        center: {lat: lat, lng: lon},
         zoom: 15
     });
     var marker = new google.maps.Marker({
-    position: {lat: la, lng: ln},
+    position: {lat: lat, lng: lon},
     map: map
   });
 }
 
-$("#button").on("click", function(){
-   la= parseFloat($(this).attr("h"), 10);
-   ln= parseFloat($(this).attr("v"), 10)
+$(document).on("click", ".btn-floating", function(){
+   lat= parseFloat($(this).attr("data-lattitude"), 10);
+   lon= parseFloat($(this).attr("data-longitude"), 10)
    map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: la, lng: ln},
+        center: {lat: lat, lng: lon},
         zoom: 15
     });
     var marker = new google.maps.Marker({
-    position: {lat: la, lng: ln},
+    position: {lat: lat, lng: lon},
     map: map
   });
    
