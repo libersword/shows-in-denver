@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Shows</title>
+</head>
+
+<body>
+    <!--  NAV -->
+    <nav>
+
+        <div class="nav-wrapper grey">
+            <a href="#" class="brand-logo center">Shows in Denver</a>
+            <a href="#" data-activates="mobile" class="button-collapse right"><i class="material-icons">filter_list</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a id="menu" href="#"><span class="right hide-on-small-and-down" id="navDate" href="#"></s></a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile">
+                        <li><a id="menu" href="#"><div class="input-field col s1 filters-span-col">
+                            <span id="filters-span"><i class="material-icons left">settings</i>Filters</span>
+                        </div></a></li>
+                        
+                        <li><a href="#"><div class="input-field col s12 m4">
+                            <input id="artist" type="text">
+                            <label for="artist">Artist</label>
+                        </div></a></li>
+                        
+                        <li><a href="#"><div class="input-field col s12 m4">
+                            <select id="venue" multiple>
+                                <option value="Pepsi Center" selected>Pepsi Center</option>
+                                <option value="Ogden Theatre" selected>Ogden Theatre</option>
+                                <option value="Bluebird Theater" selected>Bluebird Theater</option>
+                                <option value="Boulder Theater" selected>Boulder Theater</option>
+                                <option value="Cervantes Ballroom" selected>Cervantes Ballroom</option>
+                                <option value="Mission Ballroom" selected>Mission Ballroom</option>
+                                <option value="Fillmore Auditorium" selected>Fillmore Auditorium</option>
+                                <option value="DPAC" selected>DPAC</option>
+                                <option value="Macky Auditorium" selected>Macky Auditorium</option>
+                                <option value="Red Rocks" selected>Red Rocks</option>
+                                <option value="Summit" selected>Summit</option>
+                                <option value="Buffalo Rose" selected>Buffalo Rose</option>
+                                <option value="Paramount Theatre" selected>Paramount Theatre</option>
+                                <option value="Marquis Theater" selected>Marquis Theater</option>
+                            </select>
+                            <label>Venue</label>
+                        </div></a></li>
+                        
+                        
+                        <li><a id="start-date" href="#"><div class="input-field col s2">
+                            <input type="text" class="datepicker" name="start-date" id="start-date">
+                            <label for="date">Start Date</label>
+                        </div></a></li>
+                        
+                        <li><a id="end-date" href="#"><div class="input-field col s2">
+                            <input type="text" class="datepicker" name="end-date" id="end-date">
+                            <label for="date">End Date</label>
+                        </div></a></li>
+                        
+                        <li><a id="search" href="#"><div class="input-field col s1 filters-span-col">
+                            <span id="filters-span"><i class="material-icons left">search</i>Search</span>
+                        </div></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <!-- End Filter NAV -->
+
+
+    <!-- MAP CONTAINER -->
+    <div id="container">
+        <div id="map"></div>
+    </div>
+    <!-- end CONTAINER -->
+
+
+    <!-- CARD CONTAINER -->
+    <div class="card-container">
+        
+        <span class="card-container-top-action card-action black"></span>
+        <h5>Events in Denver</h5>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!-- END CARD CONTAINER -->
+
+</div>
+
+
+    <script type="text/javascript"src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <script src="script.js"></script> -->
+    
+    <!-- JS and jQuery for Materialize -->
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $(".dropdown-trigger").dropdown();
+            
+            $('#navDate').text(moment().format('dddd, MMMM Do'))
+            
+            $('.datepicker').on('mousedown', function (event) {
+                event.preventDefault();
+            })
+            
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: 15,
+                closeOnSelect: true
+            });
+            
+            $('select').material_select();
+            
+        });
+        </script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Gu4f2332ZHDJXylCEO8_3qXUGa66zKY&callback=initMap" async defer></script> -->
+</body>
+
+</html>
