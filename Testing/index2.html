@@ -25,9 +25,9 @@ var initMap = function() {
   });
 }
 
-$("#button").on("click", function(){
-   lat= parseFloat($(this).attr("h"), 10);
-   lon= parseFloat($(this).attr("v"), 10)
+$(document).on("click", ".btn-floating", function(){
+   lat= parseFloat($(this).attr("data-lattitude"), 10);
+   lon= parseFloat($(this).attr("data-longitude"), 10)
    map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: lat, lng: lon},
         zoom: 15
