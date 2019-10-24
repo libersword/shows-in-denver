@@ -28,13 +28,13 @@ $(document).ready(function() {
     // $(".sidenav-overlay").css("opacity", "0");
   });
 
-  $(".carousel").on("click", "a", function(e) {
-    e.preventDefault();
-    let lat = $(this).attr("data-latitude");
-    let lon = $(this).attr("data-longitude");
-    console.log(lat, lon);
-    console.log("btn click");
-  });
+  // $(".carousel").on("click touchstart", "a", function(e) {
+  //   let lat = $(this).attr("data-latitude");
+  //   let lon = $(this).attr("data-longitude");
+  //   console.log(lat, lon);
+  //   console.log("btn click");
+  //   e.preventDefault();
+  // });
 });
 
 function createCard(artist, image, date, venue, lat, lon) {
