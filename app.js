@@ -26,7 +26,6 @@ $(document).ready(function() {
 });
 
 function createCard(artist, image, date, venue, lat, lon) {
-  console.log(artist, image, date, venue, lat, lon);
   let carouselItem = $("<div>").addClass("carousel-item");
   let card = $("<div>").addClass("card hoverable");
   let cardImage = $("<div>").addClass("card-image");
@@ -55,9 +54,6 @@ function createCard(artist, image, date, venue, lat, lon) {
   cardContent.append(info);
 
   $(".carousel").append(carouselItem);
-  console.log(carouselItem);
-  
-  
   initCarousel();
 }
 
@@ -70,57 +66,3 @@ function initCarousel(){
 //just reinit the carousel
 $('.carousel').carousel(); 
 }
-
-// createCard(
-//   "Tom Petty",
-//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-//   "October 31, 2019",
-//   "Red Rocks",
-//   "39.6",
-//   "-105.2"
-// );
-
-// createCard(
-//   "Tom Petty",
-//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-//   "October 31, 2019",
-//   "Red Rocks",
-//   "234",
-//   "234"
-// );
-
-// createCard(
-//   "Tom Petty",
-//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-//   "October 31, 2019",
-//   "Red Rocks",
-//   "39.6",
-//   "-105.2"
-// );
-
-// createCard(
-//   "Tom Petty",
-//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-//   "October 31, 2019",
-//   "Red Rocks",
-//   "234",
-//   "234"
-// );
-
-// createCard(
-//   "Tom Petty",
-//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-//   "October 31, 2019",
-//   "Red Rocks",
-//   "39.6",
-//   "-105.2"
-// );
-
-// createCard(
-//   "Tom Petty",
-//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-//   "October 31, 2019",
-//   "Red Rocks",
-//   "234",
-//   "234"
-// );
