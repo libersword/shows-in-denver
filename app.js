@@ -20,13 +20,20 @@ $(document).ready(function() {
     console.log(venue);
     console.log(startDate);
     console.log(endDate);
+
+    // $(".button-collapse")
+    //   .sideNav()
+    //   .close();
+
+    // $(".sidenav-overlay").css("opacity", "0");
   });
 
-  $(".card-container").on("click", "a", function(e) {
+  $(".carousel").on("click", "a", function(e) {
     e.preventDefault();
     let lat = $(this).attr("data-latitude");
     let lon = $(this).attr("data-longitude");
     console.log(lat, lon);
+    console.log("btn click");
   });
 });
 
@@ -75,8 +82,8 @@ createCard(
   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
   "October 31, 2019",
   "Red Rocks",
-  "234",
-  "234"
+  "39.6",
+  "-105.2"
 );
 
 createCard(
@@ -93,8 +100,8 @@ createCard(
   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
   "October 31, 2019",
   "Red Rocks",
-  "234",
-  "234"
+  "39.6",
+  "-105.2"
 );
 
 createCard(
@@ -111,6 +118,6 @@ createCard(
   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
   "October 31, 2019",
   "Red Rocks",
-  "234",
-  "234"
+  "39.6",
+  "-105.2"
 );
