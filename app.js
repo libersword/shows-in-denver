@@ -8,7 +8,6 @@ $(document).ready(function() {
       .toLowerCase()
       .replace(" ", "-");
 
-    let venue = $("#venue").val();
 
     startDate = $(".datepicker[name=start-date]").val();
     endDate = $(".datepicker[name=end-date]").val();
@@ -16,10 +15,13 @@ $(document).ready(function() {
     startDate = moment(startDate).format("YYYY-MM-DD");
     endDate = moment(endDate).format("YYYY-MM-DD");
 
-    // console.log(artist);
-    // console.log(venue);
-    // console.log(startDate);
-    // console.log(endDate);
+    getPerformerID(artist);
+  });
+
+  $(".card-container").on("click", "a", function(e) {
+    e.preventDefault();
+    let lat = $(this).attr("data-latitude");
+    let lon = $(this).attr("data-longitude");
   });
 });
 
@@ -52,58 +54,15 @@ function createCard(artist, image, date, venue, lat, lon) {
   cardContent.append(info);
 
   $(".carousel").append(carouselItem);
+  initCarousel();
 }
 
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "39.6",
-  "-105.2"
-);
+function initCarousel(){
+  console.log('test')
+  if ($('.carousel').hasClass('initialized')){
+    $('.carousel').removeClass('initialized')
+}
 
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "39.6",
-  "-105.2"
-);
-
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "39.6",
-  "-105.2"
-);
-
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "39.6",
-  "-105.2"
-);
-
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "39.6",
-  "-105.2"
-);
-
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "39.6",
-  "-105.2"
-);
+//just reinit the carousel
+$('.carousel').carousel(); 
+}

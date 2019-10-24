@@ -15,6 +15,13 @@ div.carousel {
   bottom: 2px;
 }
 
+/* .carousel-item {
+  display: block!important;
+  transform: translateX(327px) translateY(100px) translateX(400px) translateZ(-400px);
+  z-index: -2;
+  opacity: 0.2;
+  display: block;
+} */
 /* Materialize element colors */
 .picker__date-display {
   background-color: rgb(66, 66, 66);
