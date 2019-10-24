@@ -8,7 +8,6 @@ $(document).ready(function() {
       .toLowerCase()
       .replace(" ", "-");
 
-
     startDate = $(".datepicker[name=start-date]").val();
     endDate = $(".datepicker[name=end-date]").val();
 
@@ -16,12 +15,6 @@ $(document).ready(function() {
     endDate = moment(endDate).format("YYYY-MM-DD");
 
     getPerformerID(artist);
-  });
-
-  $(".card-container").on("click", "a", function(e) {
-    e.preventDefault();
-    let lat = $(this).attr("data-latitude");
-    let lon = $(this).attr("data-longitude");
   });
 });
 
@@ -57,12 +50,11 @@ function createCard(artist, image, date, venue, lat, lon) {
   initCarousel();
 }
 
-function initCarousel(){
-  console.log('test')
-  if ($('.carousel').hasClass('initialized')){
-    $('.carousel').removeClass('initialized')
-}
+function initCarousel() {
+  if ($(".carousel").hasClass("initialized")) {
+    $(".carousel").removeClass("initialized");
+  }
 
-//just reinit the carousel
-$('.carousel').carousel(); 
+  //just reinit the carousel
+  $(".carousel").carousel();
 }
