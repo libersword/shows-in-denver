@@ -16,25 +16,11 @@ $(document).ready(function() {
     startDate = moment(startDate).format("YYYY-MM-DD");
     endDate = moment(endDate).format("YYYY-MM-DD");
 
-    console.log(artist);
-    console.log(venue);
-    console.log(startDate);
-    console.log(endDate);
-
-    // $(".button-collapse")
-    //   .sideNav()
-    //   .close();
-
-    // $(".sidenav-overlay").css("opacity", "0");
+    // console.log(artist);
+    // console.log(venue);
+    // console.log(startDate);
+    // console.log(endDate);
   });
-
-  // $(".carousel").on("click touchstart", "a", function(e) {
-  //   let lat = $(this).attr("data-latitude");
-  //   let lon = $(this).attr("data-longitude");
-  //   console.log(lat, lon);
-  //   console.log("btn click");
-  //   e.preventDefault();
-  // });
 });
 
 function createCard(artist, image, date, venue, lat, lon) {
