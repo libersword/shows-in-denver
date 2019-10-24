@@ -1,36 +1,18 @@
-/*** MAP ***/
+html,
+body,
+#container {
+  background-color: transparent;
+}
+
 #map {
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 80vh;
+  position: relative;
 }
 
-.leaflet-top .leaflet-control {
-  margin-top: 150px;
-}
-/*** end MAP ***/
-
-/* Card Container */
-.card-container {
-  background: #ffffff;
-  top: 70px;
+div.carousel {
   position: absolute;
-  left: 0;
-  margin: 10;
-  padding: 20px;
-  height: 100%;
-  width: 400px;
-  overflow: auto;
-}
-
-.card-container-top-action {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-}
-
-.card-container-top-action i {
-  margin-left: 2px;
+  bottom: 2px;
 }
 
 /* Materialize element colors */
@@ -79,12 +61,12 @@ ul.dropdown-content.select-dropdown li span {
 }
 @media only screen and (max-width: 768px) {
   .side-nav {
-    width: 80%;
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: 620px) {
   .side-nav {
-    width: 100%;
+    width: 80%;
   }
 }
