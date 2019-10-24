@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#search").on("click", function(event) {
     event.preventDefault();
+    $(".carousel").empty();
 
     let artist = $("#artist")
       .val()
