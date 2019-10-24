@@ -8,7 +8,6 @@ $(document).ready(function() {
       .toLowerCase()
       .replace(" ", "-");
 
-    let venue = $("#venue").val();
 
     startDate = $(".datepicker[name=start-date]").val();
     endDate = $(".datepicker[name=end-date]").val();
@@ -16,21 +15,19 @@ $(document).ready(function() {
     startDate = moment(startDate).format("YYYY-MM-DD");
     endDate = moment(endDate).format("YYYY-MM-DD");
 
-    console.log(artist);
-    console.log(venue);
-    console.log(startDate);
-    console.log(endDate);
+    getPerformerID(artist);
   });
 
   $(".card-container").on("click", "a", function(e) {
     e.preventDefault();
     let lat = $(this).attr("data-latitude");
     let lon = $(this).attr("data-longitude");
-    console.log(lat, lon);
   });
 });
 
 function createCard(artist, image, date, venue, lat, lon) {
+  console.log(artist, image, date, venue, lat, lon);
+  let carouselItem = $("<div>").addClass("carousel-item");
   let card = $("<div>").addClass("card hoverable");
   let cardImage = $("<div>").addClass("card-image");
   let img = $("<img>")
@@ -48,6 +45,7 @@ function createCard(artist, image, date, venue, lat, lon) {
     .text(artist);
   let info = $("<p>").text(`${date} at ${venue}`);
 
+  carouselItem.append(card);
   card.append(cardImage);
   cardImage.append(img);
   cardImage.append(pin);
@@ -56,23 +54,73 @@ function createCard(artist, image, date, venue, lat, lon) {
   cardContent.append(cardTitle);
   cardContent.append(info);
 
-  $(".card-container").append(card);
+  $(".carousel").append(carouselItem);
+  console.log(carouselItem);
+  
+  
+  initCarousel();
 }
 
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "123",
-  "123"
-);
+function initCarousel(){
+  console.log('test')
+  if ($('.carousel').hasClass('initialized')){
+    $('.carousel').removeClass('initialized')
+}
 
-createCard(
-  "Tom Petty",
-  "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
-  "October 31, 2019",
-  "Red Rocks",
-  "234",
-  "234"
-);
+//just reinit the carousel
+$('.carousel').carousel(); 
+}
+
+// createCard(
+//   "Tom Petty",
+//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
+//   "October 31, 2019",
+//   "Red Rocks",
+//   "39.6",
+//   "-105.2"
+// );
+
+// createCard(
+//   "Tom Petty",
+//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
+//   "October 31, 2019",
+//   "Red Rocks",
+//   "234",
+//   "234"
+// );
+
+// createCard(
+//   "Tom Petty",
+//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
+//   "October 31, 2019",
+//   "Red Rocks",
+//   "39.6",
+//   "-105.2"
+// );
+
+// createCard(
+//   "Tom Petty",
+//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
+//   "October 31, 2019",
+//   "Red Rocks",
+//   "234",
+//   "234"
+// );
+
+// createCard(
+//   "Tom Petty",
+//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
+//   "October 31, 2019",
+//   "Red Rocks",
+//   "39.6",
+//   "-105.2"
+// );
+
+// createCard(
+//   "Tom Petty",
+//   "https://media1.s-nbcnews.com/j/newscms/2017_40/2175431/171002-tom-petty-ac-420p_196cf56fd5bd962c850474c2930be267.fit-2000w.jpg",
+//   "October 31, 2019",
+//   "Red Rocks",
+//   "234",
+//   "234"
+// );
