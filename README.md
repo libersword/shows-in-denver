@@ -7,19 +7,19 @@ Using JavaScript, Materialize, jQuery, moment.js Google Map API, and Seatgeek AP
 
 ### Browser View with Side Nav Search
 
-![Brwoser](img/fullScreenSearch.jpg)
+![Brwoser](img/fullScreenSearch.png)
 
 ### Browser View with Search Results
 
-![Brwoser](img/fullScreen.jpg)
+![Brwoser](img/fullScreen.png)
 
 ### Mobile View with Side Nav Search
 
-![Brwoser](img/mobileSearch.jpg)
+![Brwoser](img/mobileSearch.png)
 
 ### Mobile View with Search Results
 
-![Brwoser](img/mobileScreen.jpg)
+![Brwoser](img/mobileScreen.png)
 
 # Usage
 
