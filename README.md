@@ -33,4 +33,4 @@ The site is responsive. The side nav bar scales in size depending on the viewing
 
 # Link to Project on Github
 
-[day-planner](https://libersword.github.io/shows-in-denver/#)
+[shows-in-denver](https://libersword.github.io/shows-in-denver/#)
